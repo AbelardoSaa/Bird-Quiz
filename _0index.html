@@ -9,9 +9,22 @@
   <body>
     <div>
         <h1>Bird Quiz</h1>
-        <p>test your knowlegde about birds</p>
+        <a id="statistics" href="/_7statistics.html">View Statistics</a>
+        <a id="statistics" href="/_6login.html">Login</a>
+        <h3 id="message">test your knowlegde about birds</h3>
+
         <a href='_1firstTest.html'> Start! </a> 
     </div>
 <img src="images/_0start/start-ostrich.jpg" alt="ostrich" width="250" height="250"/>
-  </body>
+<script>
+  document.body.onload = addUserName; 
+  function addUserName() {
+    const userName = localStorage.fname;
+    if (userName !== undefined) {
+      document.getElementById("message").innerHTML =
+      userName + ", test your knowlegde about birds";
+    }
+  }
+</script>  
+</body>
 </html>
